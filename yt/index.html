@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #mynav{
+            width: 100%;
+            height: 60px;
+            /* background-color: blue; */
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            background-color: white;
+        }
+        #left{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 10%;
+            height: 100%;
+            margin-left: -87px;
+            /* border: 1px solid gray; */
+            position: sticky;
+            top: 0;
+            
+        }
+        #left>i+img{
+            width: 70%;
+            margin-left: 20px;
+        }
+        #right{
+            display: flex;
+           align-items: center;
+           /* border: 1px solid gray; */
+           justify-content: space-between;
+           width: 12%;
+           height: 100%;
+           margin-right: -80px;
+           position: sticky;
+            top: 0;
+        }
+        #search{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* border: 1px solid gray; */
+            height: 100%;
+            width: 40%;
+            margin-left: 50px;
+            
+        }
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7px 20px 7px 20px;
+            border: 1px solid #d8d8d8;
+            cursor: pointer;
+        }
+        #myinput{
+            display: flex;
+            align-items: center;
+        }
+        #myinput>input{
+            width: 500px;
+            border: 1px solid #d8d8d8;
+            padding: 9px 0px 9px 8px;
+            font-size: 17px;   
+        }
+       
+        #right>:nth-child(1){
+            margin-right: -25px;
+        }
+        #right>i+i+i+img{
+            width: 17%;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 15px;
+            width: 90%;
+            margin: auto;
+            margin-top: -275px;
+            margin-right: 40px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+        }
+        #type{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            float: right;
+        }
+        #type>div{
+            border: 1px solid gray;
+            padding: 6px 15px 6px 15px;
+            border-radius: 20px;
+            background-color: #f2f2f2;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        #type>div:hover{
+            cursor: pointer;
+            background-color: #ebe5e5;
+        }
+        #type>:nth-child(1){
+            background-color: black;
+            color: white;
+        }
+        #type>:nth-child(1):hover{
+            background-color: black;
+            color: white;
+        }
+        hr{
+            width: 95%;
+            float: right;
+            color: blue;
+            size: 1px;
+        }
+        #mymic{
+            margin-left: 8px;
+        }
+        #leftsection{
+            margin-top: 20px;
+            margin-left: 1.5%;
+            position: sticky;
+            top: 80px;
+        }
+        #leftsection>div{
+            width: 1%;
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            
+        }
+        i+p{
+            font-size: 10px;
+        }
+        #leftsection>:nth-child(4)>i+p{
+            margin-left: -15px;
+        }
+        #leftsection>:nth-child(3)>i+p{
+            margin-left: -3px;
+        }
+        #leftsection>:nth-child(2)>i+p{
+            margin-left: -4px;
+        }
+        #leftsection>:nth-child(5)>i+p{
+            margin-left: -4px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div{
+            cursor: pointer;
+        }
+       #myhr>hr{
+        margin-bottom: 10px;
+       }
+       .viddiv>img+p{
+        font-size: 14px;
+        font-weight: 500;
+       }
+       .viddiv>img+p+p{
+        font-size: 12px;
+        color: #919191;
+        font-weight: 450;
+       }
+       #myhome{
+        cursor: pointer;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="mynav">
+        <div id="left">
+            <i class="material-icons">menu</i>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/YouTube_logo_%282017%29.png" alt="">
+        </div>
+        <div id="search">
+            <div id="myinput">
+            <input type="text" placeholder="search" id="searchbar" >
+            <button onclick="search()"><i class="material-icons" >search</i></button>
+        </div>
+            <i class="material-icons" id="mymic">mic</i>
+            
+        </div>
+        <div id="right">
+            <i class="material-icons">videocamp</i>
+            <i class="material-icons">apps</i>
+            <i class="material-icons">notifications</i>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Anonymous_emblem.svg" alt="">
+        </div>
+    </div>
+    
+    <hr>
+    <div id="type">
+        <div>All</div>
+        <div>Computer programming</div>
+        <div>Lo-fi</div>
+        <div>Dubstep</div>
+        <div>Electronics dance music</div>
+        <div>Memes</div>
+        <div>Gaming</div>
+        <div>Gadgets</div>
+        <div>Beatboxing</div>
+        <div>UMF</div>
+        <div>Skrillex</div>
+        <div>Watched</div>
+        <div>Michael Jackson</div>
+        <div>DSA</div>
+    </div>
+    <div id="myhr"><hr></div>
+    
+    <div id="leftsection">
+        
+            <div>
+                <i class="material-icons" id="myhome">
+                    home
+                </i>
+                <p>Home</p>
+            </div>
+        
+       
+            <div>
+                <i class="material-icons">
+                    explore
+                </i>
+                <p>Explore</p>
+            </div>
+        
+            <div>
+                <i class="material-icons">
+                        smart_display
+                </i>
+                <p>Shorts</p>
+            </div>
+        
+            <div>
+                <i class="material-icons">
+                    subscriptions
+                </i>
+                <p>Subscriptions</p>
+            </div>
+       
+            <div>
+                <i class="material-icons">
+                    video_library
+                </i>
+                <p>Library</p>
+            </div>
+        
+    </div>
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+ var api_key='AIzaSyAh8jMgsYE4IRtqJ9vUDdN6blXFjonYeYA';
+ let search=async()=>{
+      try{
+        let query=document.getElementById('searchbar').value;
+        const url= `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=${api_key}`;
+
+        let res= await fetch(url);
+        let data= await res.json();
+        append(data.items);
+        // console.log(data.items)
+
+      }
+      catch (error){
+          console.log(error);
+      }
+  }
+  
+  let append=(data)=>{
+    let container=document.getElementById('container');
+    // console.log(data)
+    document.getElementById('type').innerHTML=null;
+    document.getElementById('myhr').innerHTML=null;
+    container.innerHTML=null; 
+   data.forEach(function(element,index) {
+      
+    if(element.id.videoId!==undefined){
+        let div = document.createElement("div");
+        div.setAttribute('class','viddiv')
+    let iframe = document.createElement("iframe");
+    // iframe.src = `https://www.youtube.com/embed/${element.id.videoId}`;
+    let img=document.createElement('img');
+    img.src=element.snippet.thumbnails.medium.url;
+    iframe.allow = "fullscreen";
+    let h3 = document.createElement("p")
+    h3.innerText=element.snippet.title;
+    let name=document.createElement('p');
+    name.innerText=element.snippet.channelTitle;
+    div.append(img, h3, name);
+    div.onclick = () =>{
+        let obj={
+            name:element.snippet.title,
+            url:element.id.videoId,
+        }
+        console.log(obj)
+        localStorage.setItem('video',JSON.stringify(obj));
+        window.location.href='play.html';
+    }
+    container.append(div);
+    }
+    
+   
+   });
+  }
+  let home=async()=>{
+      try{
+        let query=document.getElementById('searchbar').value;
+        const url= `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=${api_key}`;
+
+        let res= await fetch(url);
+        let data= await res.json();
+        __append(data.items);
+        // console.log(data.items)
+
+      }
+      catch (error){
+          console.log(error);
+      }
+  }
+  let __append=(data)=>{
+    let container=document.getElementById('container');
+    // console.log(data)
+    
+    container.innerHTML=null; 
+   data.forEach(function(element,index) {
+      
+    if(element.id.videoId!==undefined){
+        let div = document.createElement("div");
+        div.setAttribute('class','viddiv')
+    let iframe = document.createElement("iframe");
+    // iframe.src = `https://www.youtube.com/embed/${element.id.videoId}`;
+    let img=document.createElement('img');
+    img.src=element.snippet.thumbnails.medium.url;
+    iframe.allow = "fullscreen";
+    let h3 = document.createElement("p")
+    h3.innerText=element.snippet.title;
+    let name=document.createElement('p');
+    name.innerText=element.snippet.channelTitle;
+    div.append(img, h3, name);
+    div.onclick = () =>{
+        let obj={
+            name:element.snippet.title,
+            url:element.id.videoId,
+        }
+        console.log(obj)
+        localStorage.setItem('video',JSON.stringify(obj));
+        window.location.href='play.html';
+    }
+    container.append(div);
+    }
+    
+   
+   });
+  }
+  home();
+  
+  
+//   <iframe width="956" height="538" src="https://www.youtube.com/embed/eEpnXK8xOlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</script>
