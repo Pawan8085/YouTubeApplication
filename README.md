@@ -1,6 +1,4 @@
-# Pawan-Kumar
-YouTube application
+# YouTube Applicatio
+# In this application you can watch videos, you can search videos that you want to see it is like a same youtube application and it is add free 
 
-Features :- You can watch and search videos as a youtube application and it is add free as well
-
-Teck staks :- Html, Js , Css, Api's
+Teck staks :- HTML, JAVASCRIPT , CSS, API'S
